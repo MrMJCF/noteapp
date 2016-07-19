@@ -1,0 +1,192 @@
+// Place all the styles related to the notes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#notecontainer {
+    margin-top: -20px;
+    float: left;
+    width: calc(75% - 22px);
+    h1 {
+        margin-left: 10px;
+    }
+    .title {
+        font-weight: 500;
+        font-size: 17px;
+    }
+    .notes {
+        font-size: 17px;
+        margin-top: 2px;
+        margin-bottom: 1px;
+        border-bottom: 1px solid #2c6c9a;
+    }/*
+    .note:nth-child(even) {
+        margin: 11px;
+        background: #dbdbdb;
+        border-radius: 7px;
+        width: calc( 50% - 22px);
+        float: left;
+        padding: 7px;
+    }*/
+    .note {
+        margin: 11px;
+        background: #dbdbdb;
+        border-radius: 7px;
+        width: calc( 50% - 22px);
+        float: left;
+        padding: 7px;
+        word-wrap: break-word;
+        .glyphicon {
+            font-size: 15px;
+        }   
+    }/*
+    .note:nth-child(2n + 1) {
+        margin: 11px;
+        background: #dbdbdb;
+        border-radius: 7px;
+        padding: 7px;
+        width: calc( 50% - 22px);
+        float: right;
+    } */
+    .pagination {
+        margin-top: -30px;
+        display: block;
+        span, a {
+            color: #2b90d9;
+            text-decoration: underline;
+            background: #dbdbdb;
+            outline: none;
+            border-radius: 8px;
+            border: 3px solid #bbb;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            margin-bottom: 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .disabled {
+            color: #a3a3a3;
+            border: #a3a3a3;
+            cursor: not-allowed;
+        }
+    }
+}
+@media (min-width: 1081px) { /* Desktop */
+    #recommended {
+        float: right;
+        width: calc(25%);
+        z-index: 200;
+        margin-bottom: 0;
+         //image-url("shrug.png"), default FOR CURSOR
+        .sidebar { 
+            float: right;
+            width: 100%;
+            min-height: 70vh;
+            background: #dbdbdb;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 16px;
+            margin-top: -10px;
+        }
+        .recommendation {
+            padding: 5px;
+            border: 2px solid #bbbbbb;
+            border-radius: 8px;
+        }
+    
+        #recommended {
+            margin: 0 0;
+        }
+    }
+}
+@media (max-width: 1080px) { /* Mobile */
+
+.spotlightsection {
+    display: none;
+    visibility: none;
+    width: 0;
+    height: 0;
+}
+
+#notecontainer {
+    margin-top: 0;
+    width: 100%;
+    background: #ccc;
+    h1 {
+        margin-left: 10px;
+    }
+}
+
+    #recommended {
+        width: calc(100% - 20px);
+        margin: 0 10px;
+        h1 {
+            visibility: hidden;
+            display: none;
+        }
+        .sidebar { 
+            float: right;
+            width: 100%;
+            min-height: 70vh;
+            background: #dbdbdb;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        .recommendation {
+            padding: 5px;
+            border: 2px solid #bbbbbb;
+            border-radius: 8px;
+        }
+    }
+}
+
+
+/* In form */
+
+#formtitle {
+    background: #dbdbdb;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #dbdbdb;
+    padding: 4px;
+}
+
+#enternotesform {
+    background: #dbdbdb;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #2b90d9;
+    padding: 10px;
+}
+
+#tips {
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    background: #dbdbdb;
+    margin-bottom: 50px;
+    ul {
+        display: inline-block;
+        margin: 20px 0 20px 0;   
+        li { /*
+            list-style: square inside url("/assets/logo.png");
+        */}
+    }
+}
+
+/* In Show */
+#titleshow {
+    background: linear-gradient(to right, #00C9FF, #2b90d9);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 30px;
+    font-weight: 500;
+    word-wrap: break-word;
+    width: calc( 100% - 22px);
+    margin: 11px;
+}
+
+#notesshow {
+    font-size: 20px;
+}

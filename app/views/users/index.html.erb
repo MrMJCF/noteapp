@@ -1,0 +1,9 @@
+<section>
+    <% @users.each do |user| %>
+        <div class="user">
+            <img src="<%= user.profilepic %>">
+            <p><%= user.username %></p>
+            <a href="/users/<%= user.id %>">Click here for profile!</a>
+        </div>
+    <% end %>
+</section>

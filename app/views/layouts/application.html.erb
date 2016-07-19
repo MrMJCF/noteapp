@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickNote</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+<!--
+Never give up!
+-->
+<% if user_signed_in? %>
+<div class="navside">
+    <nav>
+        <div class="part">
+            <%= link_to image_tag("logo.png"), root_path %>
+        </div>
+        <div class="part">
+            <%= link_to new_note_path, class: "btn-circle", id: 'notenew' do %>
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>New Note</span>
+            <% end %>
+            <%= link_to notes_path, class: "btn-circle", id: 'noteindex' do %>
+                <i class="glyphicon glyphicon-tasks"></i>
+                <span>Note Index</span>
+            <% end %>
+            <%= link_to users_path, class: "btn-circle", id: 'users' do %>
+                <i class="glyphicon glyphicon-user"></i>
+                <span>User Index</span>
+            <% end %>
+            <%= link_to edit_user_registration_path, class: "btn-circle", id: 'usersetting' do %>
+                <i class="glyphicon glyphicon-cog"></i>
+                <span>Settings</span>
+            <% end %>
+            <%= link_to destroy_user_session_path, :method => :delete, class: "btn-circle" do %>
+                <i class="glyphicon glyphicon-log-out"></i>
+                <span>Signout</span>
+            <% end %>
+        </div>
+        <%= link_to edit_user_registration_path do %>
+            <div id="profilepic">
+                <%= current_user.username %>
+                <br><br>
+                <img src="<%= current_user.profilepic %>">
+            </div>
+        <% end %>
+    </nav>
+    <div class="sidenav">
+        <div class="spotlightsection">
+            <h2>Categories</h2>
+        </div>
+        <div class="spotlightsection">
+            <h5>HEYO</h5>
+        </div>
+    </div>
+</div>
+<header>
+    <%= form_tag notes_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], :id => 'search', autofocus: true, :placeholder => 'Search' %>
+        <%= image_submit_tag("Search.svg", id: "searchpng")  %>
+    <% end %>
+    <div id="logo">
+        <div id="notification">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+        </div>
+        <div id="name">
+            <div class="notequick">
+                QuickNote
+            </div>
+            <div class="bymateo">
+                By Mateo C.
+            </div>
+        </div>
+    </div>
+</header>
+<% else %>
+<style>
+    section {
+        height: 100vh;
+        width: 100vw;
+    }
+</style>
+
+<% end %>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<section>
+    <div id="notes">
+        <h1 id="username"><%= @user.username.titleize %>'s notes!<img src="<%= @user.profilepic %>"></h1>
+        <% @notes.order('created_at DESC').each do |note| %>
+            <div class="note">
+            <span class="title"><%= truncate(note.title, :chars => 20) %>&nbsp;&nbsp;</span>
+            <div class="notes"><%= truncate(note.notes, :chars => 20) %></div>
+
+            <button class="btn-circle">
+                <i class="glyphicon glyphicon-thumbs-up"></i>
+            </button>
+            
+            <button class="btn-circle">
+                <i class="glyphicon glyphicon-thumbs-down"></i>
+            </button>           
+            
+            <button class="btn-circle">
+                <%= link_to '<span class="glyphicon glyphicon-new-window"></span>'.html_safe, note, :class => 'btn btn-default' %>
+            </button>
+            
+            <% if note.user == current_user %>
+            <button class="btn-circle">
+                <%= link_to '<span class="glyphicon glyphicon-edit"></span>'.html_safe, edit_note_path(note), :class => 'btn btn-default' %>
+            </button>
+            
+            <button class="btn-circle">
+                <%= link_to '<span class="glyphicon glyphicon-remove"></span>'.html_safe, note, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %>
+            </button>
+            <% end %>
+            
+            </div>
+        <% end %>
+        <% if @notes.blank? %>
+        <h2>This user has not created any notes :(</h2>
+        <% end %>
+    </div>
+</div>
+</section>

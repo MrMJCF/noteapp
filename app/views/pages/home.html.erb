@@ -1,0 +1,93 @@
+<div id="navbar">
+    <div id="logo">
+        <%= image_tag 'logo.png' %>
+        <div id="name">
+            <div class="notequick">
+            QuickNote
+            </div>
+            <div class="bymateo">
+            By Mateo C.
+            </div>
+        </div>
+    </div>
+    <a class="toggle">&#9776;</a>
+    <div class="links">
+        <%= link_to('Sign In', new_user_session_path) %>
+        <%= link_to('Sign Up', new_user_registration_path, class: 'trybutton') %>
+        <a href="/pages/home">Home</a>
+        <a href="/pages/about">About</a>
+        <a href="/pages/gettingstarted">Getting Started</a>
+    </div>
+</div>
+<div class="intro">
+    <div class="desc">
+     <h1>THE ULTIMATE WAY TO</h1>
+     <h1>SHARE NOTES</h1>
+     <p>A new professional utility for sharing and creating notes</p>
+    </div>
+    <div class="options">
+        <%= link_to('Sign Up', new_user_registration_path, class: 'trybutton') %>
+        <a href="">Watch Video</a>
+    </div>
+</div>
+<div class="features">
+    <div class="container">
+        <div class="box">
+            <h2>Hye</h2>
+            <p>
+               You can use other user's notes. 
+               Other users can make notes, for
+               you to read and study off of. 
+               Crazy Right?
+            </p>
+        </div>
+        <div class="box">
+            <h2>Eyh</h2>
+            <p>
+               You can search other user's notes. 
+               Very convenient for when you are in a rush. 
+               Sweet!
+            </p>
+        </div>
+        <div class="box">
+            <h2>heY</h2>
+            <p>
+               Super easy and fun to use interface 
+               whether you are on mobile or on desktop, 
+               a super clean, modern, and animated design 
+               awaits you. Awesome!
+            </p>
+        </div>
+        <div class="box">
+            <h2>Why</h2>
+            <p>
+               You can use other user's notes. 
+               Other users can make notes, for
+               you to read and study off of. Crazy Right?
+            </p>
+        </div>
+        <div class="box">
+            <h2>lsj</h2>
+            <p>
+               You can use other user's notes. 
+               Other users can make notes, for
+               you to read and study off of. Crazy Right?
+            </p>
+        </div>
+        <div class="box">
+            <h2>Dhhhhhhh</h2>
+            <p>
+               You can use other user's notes. 
+               Other users can make notes, for
+               you to read and study off of. Crazy Right?
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $(".toggle").click(function() {
+        $(".links").slideToggle();
+    });
+});
+</script>
