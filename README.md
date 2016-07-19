@@ -1,24 +1,24 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
+       ___        _      _    _   _       _       
+      / _ \ _   _(_) ___| | _| \ | | ___ | |_ ___ 
+     | | | | | | | |/ __| |/ /  \| |/ _ \| __/ _ \
+     | |_| | |_| | | (__|   <| |\  | (_) | ||  __/
+      \__\_\\__,_|_|\___|_|\_\_| \_|\___/ \__\___|
     ----------------------------------------------------------------- 
 
 
-Welcome to your Rails project on Cloud9 IDE!
+QuickNote!
 
-To get started, just do the following:
+Your one-stop-shop for all things note!:
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://noteapp-mrmjcf-1.c9users.io/).
+1. Make notes!
+2. Share notes!
+3. Notes!
 
-Happy coding!
-The Cloud9 IDE team
+Happy note-ing!
+    -Mateo C team
 
 
 ## Support & Documentation
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+idk yet
