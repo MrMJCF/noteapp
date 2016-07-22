@@ -5,7 +5,7 @@ class NotesController < ApplicationController
     
     
     def index
-        @notes = Note.search(params[:search]).order('created_at DESC').includes(:user).paginate(page: params[:page], per_page: 8)
+        @notes = Note.search(params[:search]).includes(:user).paginate(page: params[:page], per_page: 8)
     end 
     
     def new

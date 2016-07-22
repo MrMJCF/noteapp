@@ -27,62 +27,77 @@
     </div>
     <div class="options">
         <%= link_to('Sign Up', new_user_registration_path, class: 'trybutton') %>
-        <a href="">Watch Video</a>
+        <!--<a href="">Not convinced?</a>-->
     </div>
 </div>
+
+<div class="shots">
+    <div class="shot">
+        
+    </div>
+    <div class="shot">
+        
+    </div>
+    <div class="shot">
+        
+    </div>
+</div>
+
 <div class="features">
+    <h1>Still unsure? Here are more features.</h1>
+    <h2>You would never believe how helpful this could be.</h2>
     <div class="container">
         <div class="box">
-            <h2>Hye</h2>
+            <h3>Community</h3>
             <p>
                You can use other user's notes. 
                Other users can make notes, for
                you to read and study off of. 
-               Crazy Right?
             </p>
         </div>
         <div class="box">
-            <h2>Eyh</h2>
+            <h3>Categories</h3>
             <p>
-               You can search other user's notes. 
-               Very convenient for when you are in a rush. 
-               Sweet!
+               Categories can be used for finding notes that
+               are too general to search for. 
             </p>
         </div>
         <div class="box">
-            <h2>heY</h2>
+            <h3>Search</h3>
             <p>
-               Super easy and fun to use interface 
-               whether you are on mobile or on desktop, 
-               a super clean, modern, and animated design 
-               awaits you. Awesome!
+               You can search for other user's notes. 
+               Convenient for when you don't have the notes
+               or resources needed. 
             </p>
         </div>
         <div class="box">
-            <h2>Why</h2>
+            <h3>Intutive</h3>
             <p>
-               You can use other user's notes. 
-               Other users can make notes, for
-               you to read and study off of. Crazy Right?
+               Reguardless if you are on mobile or desktop,
+               a clean and instinctive user interface leads you
+               around.
             </p>
         </div>
         <div class="box">
-            <h2>lsj</h2>
+            <h3>Fast</h3>
             <p>
-               You can use other user's notes. 
-               Other users can make notes, for
-               you to read and study off of. Crazy Right?
+               Speed is key. NoteQuick tries to make the best
+               experience possible by making sure there are no
+               bottlenecks or bugs in our back-end code.
             </p>
         </div>
         <div class="box">
-            <h2>Dhhhhhhh</h2>
+            <h3>Everybody</h3>
             <p>
-               You can use other user's notes. 
-               Other users can make notes, for
-               you to read and study off of. Crazy Right?
+              <em>NoteQuick is not only for students and teachers.</em>
+              NoteQuick is for anybody and <em>everybody</em> 
+              who wants to share and make notes.
             </p>
         </div>
+        <div class="clearer"></div>
+        <div class="trybutton">Signup!</div>
     </div>
+    <%= User.all.size %>
 </div>
 <script>
 $(document).ready(function() {

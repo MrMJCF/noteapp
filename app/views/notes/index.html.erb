@@ -4,19 +4,19 @@
         <% @notes.each do |note| %>
             <div class="note">
             <span class="title"><%= truncate(note.title, :chars => 30) %>&nbsp;&nbsp;</span>
-            <div class="notes"><em><%= truncate(note.notes, :chars => 30) %></em></div>
+            <div class="notes"><em><%= truncate(note.notes, :chars => 50) %></em></div>
 
             <button class="btn-circle">
                 <%= link_to '<span class="glyphicon glyphicon-user"></span>'.html_safe, note.user, :class => 'btn btn-default' %>
             </button>
             
-            <button class="btn-circle">
-                <i class="glyphicon glyphicon-thumbs-up"></i>
-            </button>
+            <!--<button class="btn-circle">-->
+            <!--    <i class="glyphicon glyphicon-thumbs-up"></i>-->
+            <!--</button>-->
             
-            <button class="btn-circle">
-                <i class="glyphicon glyphicon-thumbs-down"></i>
-            </button>           
+            <!--<button class="btn-circle">-->
+            <!--    <i class="glyphicon glyphicon-thumbs-down"></i>-->
+            <!--</button>           -->
             
             <button class="btn-circle">
                 <%= link_to '<span class="glyphicon glyphicon-new-window"></span>'.html_safe, note, :class => 'btn btn-default' %>

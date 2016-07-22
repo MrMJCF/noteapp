@@ -12,7 +12,7 @@ body {
 .trybutton {
     border: solid 3px #7fbce8;
     color: #2b90d9;
-    padding: 8px 34px;
+    padding: 10px 34px;
     border-radius: 10px;
     text-decoration: none;
     -webkit-transition: .25s;
@@ -53,7 +53,7 @@ body {
     .toggle {
         float: right;
         font-size: 40px;
-        padding: 10px 0 0 15px;
+        padding: 6px 0 0 15px;
         text-decoration: none;
         @media (min-width: 1081px) { /* Desktop */
             display: none;
@@ -121,35 +121,64 @@ body {
     .options {
         width: 300px;
         margin: 0 auto;
+        cursor: pointer;
         font-size: 20px;
-        a:last-child {
-            float: right;
-            cursor: pointer;
-        }
+            text-align: center;
+        // a:last-child {
+        //     float: right;
+        // }
     }
 }
 
 .features {
+    background: #95c7ec;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    h1, h2 {
+        font-weight: 400;
+    }
+    h1 {
+        margin-bottom: -10px;
+        font-size: 40px;
+    }
+    h2 {
+        margin-bottom: -20px;
+    }
     .container {
-        margin: 100px;
+        margin: 30px 150px 70px 150px;
+        @media (max-width: 1080px) { /* Mobile */
+            margin: 20px;
+        }
         .box {
+            h3 {
+                font-size: 22px;
+                margin-bottom: -10px;
+            }
             width: 33.33%;
             height: 250px;
-            padding: 20px;
+            padding: 20px 40px;
             display: inline-block;
             float: left;
+            @media (max-width: 1080px) { /* Mobile */
+                width: 100%;
+                padding: 10px;
+                height: auto;
+            }
             p {
-                font-size: 14px;
+                font-size: 19px;
                 font-weight: 300;
             }
         }
-        @media (max-width: 1080px) { /* Mobile */
-            .container {
-                margin: 20px;
-                .box {
-                    width: 100%;
-                }
-            }
+        .clearer {
+            clear: both;
+        }
+        .trybutton { 
+            width: 200px;
+            margin: 40px auto;
+            font-size: 20px;
+            border: #2b90d9 3px solid;
         }
     }
 }

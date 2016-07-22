@@ -1,4 +1,4 @@
-<section>
+<div class="auth">
 <div class="centerform">
 <h2>Log in</h2>
 <p class="notice"><%= notice %></p>
@@ -22,10 +22,12 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit 'Log in', id: 'loginbutton'  %>
+    <%= f.submit 'Log in', :id => 'signinbutton'   %>
+    <%= render "devise/shared/links" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<!--<%= render "devise/shared/links" %> THIS WOULD HAVE BEEN ORIGINALLY HERE -->
+
 </div>
-</section>
+</div>

@@ -1,5 +1,5 @@
 <section>
-<div class="centerform">
+<div class="edituser">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -11,7 +11,6 @@
   </div>
 
   <div class="field">
-    <p>(Enter a image adress. Make sure it ends in a .jpg or other image format)</p>
     <%= f.label :profilepic %><br />
     <%= f.text_field :profilepic, :class => 'formbox' %>
   </div>

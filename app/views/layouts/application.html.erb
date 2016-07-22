@@ -59,7 +59,7 @@ Never give up!
 </div>
 <header>
     <%= form_tag notes_path, :method => 'get' do %>
-        <%= text_field_tag :search, params[:search], :id => 'search', autofocus: true, :placeholder => 'Search' %>
+        <%= text_field_tag :search, params[:search], :id => 'search', autofocus: false, :placeholder => 'Search notes' %>
         <%= image_submit_tag("Search.svg", id: "searchpng")  %>
     <% end %>
     <div id="logo">
@@ -77,14 +77,6 @@ Never give up!
         </div>
     </div>
 </header>
-<% else %>
-<style>
-    section {
-        height: 100vh;
-        width: 100vw;
-    }
-</style>
-
 <% end %>
 <%= yield %>
 

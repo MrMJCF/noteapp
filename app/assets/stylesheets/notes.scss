@@ -49,6 +49,7 @@
     .pagination {
         margin-top: -30px;
         display: block;
+        clear: both;
         span, a {
             color: #2b90d9;
             text-decoration: underline;
@@ -70,7 +71,7 @@
         }
     }
 }
-@media (min-width: 1081px) { /* Desktop */
+@media (min-width: 767px) { /* Desktop */
     #recommended {
         float: right;
         width: calc(25%);
@@ -98,7 +99,7 @@
         }
     }
 }
-@media (max-width: 1080px) { /* Mobile */
+@media (max-width: 767px) { /* Mobile */
 
 .spotlightsection {
     display: none;
@@ -114,6 +115,9 @@
     h1 {
         margin-left: 10px;
     }
+    // .note {
+    //     min-height: 150px; Kinda works, ish
+    // }
 }
 
     #recommended {
@@ -143,6 +147,24 @@
 
 
 /* In form */
+
+.submitbutton {
+    background: #dbdbdb;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #dbdbdb;
+    padding: 4px;
+    margin-top: 10px;
+    -webkit-transition: .25s;
+    transition: .25s;
+    margin: 20px;
+}
+
+.submitbutton:hover {
+    background: #bbbbbb;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
 
 #formtitle {
     background: #dbdbdb;
