@@ -18,15 +18,9 @@
             display: block;
         }
     }
-
     float: left;
     width: calc(100%);
     word-wrap: break-word;
-    .note {
-        .glyphicon {
-            font-size: 15px;
-        }    
-    }
     .title {
         font-weight: 500;
         font-size: 17px;
@@ -34,38 +28,50 @@
         word-wrap: break-word;
 
     }
-    .notes {
+    .note {
         font-size: 17px;
         margin-top: 2px;
         margin-bottom: 1px;
         border-bottom: 1px solid #2c6c9a;
         width: 100%;
-        word-wrap: break-word;
         margin: 11px;
         background: #dbdbdb;
         border-radius: 7px;
         width: calc( 50% - 22px);
         float: left;
         padding: 7px;
+        .glyphicon {
+            font-size: 15px;
+        }    
     }
 }
 
-.user {
-    width: calc(20% - 22px);
-    @media (max-width: 767px) { /* Mobile */
-        width: calc(50% - 22px);
+//User Index
+.usersindexsection {
+    background-image: image-url('Grid.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: 50%;
+    .user {
+        width: calc(20% - 22px);
+        @media (max-width: 767px) { /* Mobile */
+            width: calc(50% - 22px);
+        }
+        padding: 20px;
+        margin: 11px;
+        border-radius: 8px !important;
+        img {
+            width: 100%;
+        }
+        text-align: center;
+        background: #dbdbdb;
+        float: left;
     }
-    padding: 20px;
-    margin: 11px;
-    border-radius: 8px !important;
-    img {
-        width: 100%;
-    }
-    text-align: center;
-    background: #dbdbdb;
-    float: left;
+    // .user:nth-child(5n) {
+    //     height: calc( 20% * 1.3560209424 );
+    // }
 }
-
 
 /* User Authentication */
 .auth {
@@ -73,7 +79,7 @@
     width: 100vw;
     background: #134061;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     img {
         width: 80px;
         margin: 0 auto 20px auto;
@@ -86,8 +92,8 @@
         @media (min-width: 767px) {
             padding: 20px;
             background: #113957;
+            width: 44%;
         }
-        width: 44%;
         @media (max-width: 767px) {
             width: 80vw;
         }
@@ -126,17 +132,24 @@
                 border: transparent 3px solid;
                 width: 100%;
                 margin: 5px 0;
+                -webkit-transition: .25s;
+                transition: .25s;
             }
-            a {
-                color: #a3a3a3;
-                border: #a3a3a3;
-                cursor: not-allowed;
+            .formbox:hover {
+                background: #4f6675;
+                -webkit-transition: .25s;
+                transition: .25s;
+            }
+            .formbox:focus {
+                background: #e5e5e5;
+                -webkit-transition: .25s;
+                transition: .25s;
             }
         }
     }
     // Signin/Login Buttons 
     // <%= render "devise/shared/links" %> would have been originally outside the form
-    .actions input, a {
+    .actions input, a:not(:first-child) {
         color: #ccc;
         text-decoration: underline;
         background: #3c5566;
@@ -152,11 +165,88 @@
         font-weight: 400;
     }
     
-    #signupbutton {
+    #signupbutton, #signinbutton {
         border: 3px solid #2b90d9;
-    }    
-    
-    #signinbutton {
+    }
+}
+/* User Authentication for editing registrations */
+
+#edituser {
+    background: #134061;
+    .formarea {
+        width: 40%;
+        margin: 10px 5%;
+        border-radius: 8px;
+        font-weight: 300;
+        padding: 20px;
+        background: #113957;
+        color: #ccc;
+        float: left;
+        h2 {
+            font-size: 30px;
+        }
+    }
+    .field {
+        line-height: 32px;
+        label {
+            font-size: 20px;
+            font-weight: 400;
+        }
+        em {
+            margin: 0;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+        .formbox {
+            border-radius: 8px;
+            outline: none;
+            padding: 5px 7px;
+            font-size: 17px;
+            background: #3c5566;
+            border: transparent 3px solid;
+            width: 100%;
+            margin: 5px 0;
+            -webkit-transition: .25s;
+            transition: .25s;
+        }
+        .formbox:hover {
+            background: #4f6675;
+            -webkit-transition: .25s;
+            transition: .25s;
+        }
+        .formbox:focus {
+            background: #e5e5e5;
+            -webkit-transition: .25s;
+            transition: .25s;
+        }
+    }
+    .actions [value="Update"] {
+        color: #ccc;
+        text-decoration: underline;
+        background: #3c5566;
+        outline: none;
+        border-radius: 8px;
         border: 3px solid #2b90d9;
+        display: inline-block;
+        padding: 6px 8px;
+        margin: 10px 10px 0 0;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    [value="Cancel my account"] {
+        color: #ccc;
+        text-decoration: underline;
+        background: #3c5566;
+        outline: none;
+        border-radius: 8px;
+        border: 3px solid red;
+        display: inline-block;
+        padding: 6px 8px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
     }
 }

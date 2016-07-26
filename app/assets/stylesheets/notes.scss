@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #notecontainer {
+    background-image: image-url('Grid.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 36.5%;
+    background-size: 50%;
     margin-top: -20px;
     float: left;
     width: calc(75% - 22px);

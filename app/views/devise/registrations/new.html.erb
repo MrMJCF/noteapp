@@ -1,19 +1,19 @@
 <div class="auth">
 <div class="centerform">
 <%= image_tag 'logo.png' %>
-<h2>Discover what you have been missing on.</h2>
-<h3>Finally, a resource that can help you, while helping others.</h3>
+<h2>Discover what you have been missing.</h2>
+<h3>Finally, a resource that can help you while helping others.</h3>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, :class => 'formbox' %>
+    <%= f.text_field :username, autofocus: false, :class => 'formbox' %>
   </div>
 
   <div class="field">
     <%= f.label :profilepic %><br />
-    <em>(Enter a image adress. Make sure it ends in a .jpg or other image format)</em>
+    <em>(Enter an image address. Make sure it ends in a .jpg or other image format)</em>
     <%= f.text_field :profilepic, :class => 'formbox' %>
   </div>
 
