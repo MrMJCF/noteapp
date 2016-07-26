@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :rememberable, :trackable, :validatable#, :recoverable
-  has_many :notes
+  has_many :notes, dependent: :destroy
   
   default_scope -> { order(created_at: :desc) } # newest users
 
