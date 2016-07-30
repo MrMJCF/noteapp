@@ -43,6 +43,9 @@ Never give up!
         <%= link_to edit_user_registration_path do %>
             <div id="profilepic">
                 <%= current_user.username %>
+                <% if current_user.admin? %>
+                    HEY ADMIN
+                <% end %>
                 <br><br>
                 <img src="<%= current_user.profilepic %>">
             </div>

@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  
+  def wait
+  end
+  
   def home
   end
 

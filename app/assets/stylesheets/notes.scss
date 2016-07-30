@@ -9,6 +9,7 @@
     background-size: 50%;
     margin-top: -20px;
     float: left;
+    min-height: calc( 100vh - 100px);
     width: calc(75% - 22px);
     h1 {
         margin-left: 10px;
@@ -22,7 +23,8 @@
         margin-top: 2px;
         margin-bottom: 1px;
         border-bottom: 1px solid #2c6c9a;
-    }/*
+    }
+    /*
     .note:nth-child(even) {
         margin: 11px;
         background: #dbdbdb;
@@ -33,7 +35,7 @@
     }*/
     .note {
         margin: 11px;
-        background: #dbdbdb;
+        background: rgba( 219, 219, 219, 0.75);
         border-radius: 7px;
         width: calc( 50% - 22px);
         float: left;
@@ -41,8 +43,9 @@
         word-wrap: break-word;
         .glyphicon {
             font-size: 15px;
-        }   
-    }/*
+        }
+    }
+    /*
     .note:nth-child(2n + 1) {
         margin: 11px;
         background: #dbdbdb;
@@ -55,7 +58,8 @@
         margin-top: -30px;
         display: block;
         clear: both;
-        span, a {
+        span,
+        a {
             color: #2b90d9;
             text-decoration: underline;
             background: #dbdbdb;
@@ -76,14 +80,25 @@
         }
     }
 }
-@media (min-width: 767px) { /* Desktop */
+#recommended {
+    span {
+        padding: 4px 7px;
+        background: rgba(204, 204, 204, .8);
+        border-radius: 6px;
+        float: left;
+        margin: 4px;
+    }
+}
+
+@media (min-width: 767px) {
+    /* Desktop */
     #recommended {
         float: right;
         width: calc(25%);
         z-index: 200;
         margin-bottom: 0;
-         //image-url("shrug.png"), default FOR CURSOR
-        .sidebar { 
+        //image-url("shrug.png"), default FOR CURSOR
+        .sidebar {
             float: right;
             width: 100%;
             min-height: 70vh;
@@ -93,38 +108,28 @@
             font-size: 16px;
             margin-top: -10px;
         }
-        .recommendation {
-            padding: 5px;
-            border: 2px solid #bbbbbb;
-            border-radius: 8px;
-        }
-    
-        #recommended {
-            margin: 0 0;
-        }
     }
 }
-@media (max-width: 767px) { /* Mobile */
 
-.spotlightsection {
-    display: none;
-    visibility: none;
-    width: 0;
-    height: 0;
-}
-
-#notecontainer {
-    margin-top: 0;
-    width: 100%;
-    background: #ccc;
-    h1 {
-        margin-left: 10px;
+@media (max-width: 767px) {
+    /* Mobile */
+    .spotlightsection {
+        display: none;
+        visibility: none;
+        width: 0;
+        height: 0;
     }
-    // .note {
-    //     min-height: 150px; Kinda works, ish
-    // }
-}
-
+    #notecontainer {
+        margin-top: 0;
+        width: 100%;
+        background: #ccc;
+        h1 {
+            margin-left: 10px;
+        }
+        // .note {
+        //     min-height: 150px; Kinda works, ish
+        // }
+    }
     #recommended {
         width: calc(100% - 20px);
         margin: 0 10px;
@@ -132,7 +137,7 @@
             visibility: hidden;
             display: none;
         }
-        .sidebar { 
+        .sidebar {
             float: right;
             width: 100%;
             min-height: 70vh;
@@ -153,56 +158,84 @@
 
 /* In form */
 
-.submitbutton {
-    background: #dbdbdb;
-    outline: none;
-    border-radius: 8px;
-    border: 2px solid #dbdbdb;
-    padding: 4px;
-    margin-top: 10px;
-    -webkit-transition: .25s;
-    transition: .25s;
-    margin: 20px;
-}
-
-.submitbutton:hover {
-    background: #bbbbbb;
-    -webkit-transition: .25s;
-    transition: .25s;
-}
-
-#formtitle {
-    background: #dbdbdb;
-    outline: none;
-    border-radius: 8px;
-    border: 2px solid #dbdbdb;
-    padding: 4px;
-}
-
-#enternotesform {
-    background: #dbdbdb;
-    outline: none;
-    border-radius: 8px;
-    border: 2px solid #2b90d9;
-    padding: 10px;
-}
-
-#tips {
-    height: auto;
-    width: 100%;
-    border-radius: 8px;
-    background: #dbdbdb;
-    margin-bottom: 50px;
-    ul {
+#noteform {
+    
+    label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    .submitbutton {
+        font-size: 18px;
+        background: #dbdbdb;
+        outline: none;
+        border-radius: 8px;
+        border: 2px solid #dbdbdb;
+        padding: 6px;
+        margin-top: 10px;
+        -webkit-transition: .25s;
+        transition: .25s;
+        margin: 20px 0;
+        border: transparent 4px solid;
+    }
+    .submitbutton:hover {
+        border: #2b90d9 4px solid;
+        -webkit-transition: .25s;
+        transition: .25s;
+    }
+    #formtitle {
         display: inline-block;
-        margin: 20px 0 20px 0;   
-        li { /*
-            list-style: square inside url("/assets/logo.png");
-        */}
+        background: #dbdbdb;
+        outline: none;
+        border-radius: 8px;
+        border: 2px solid #dbdbdb;
+        padding: 4px;
+        font-size: 20px;
+        width: 80%;
+        margin: 14px 0;
+    }
+    
+    [for="note_category"], select[name="note[category_id]"] {
+        margin: 8px 0;
+        display: inline-block;
+        font-size: 20px;
+    }
+    
+    #note_category_id {
+        display: inline-block;
+    }
+    
+    #enternotesform {
+        background: #dbdbdb;
+        outline: none;
+        border-radius: 8px;
+        border: 4px solid #2b90d9;
+        padding: 10px;
+        margin: 14px 0;
+        font-size: 16px;
+    }
+    #tips {
+        height: auto;
+        width: 100%;
+        border-radius: 8px;
+        background: #dbdbdb;
+        margin-bottom: 50px;
+        ul {
+            display: inline-block;
+            margin: 20px 0 20px 0;
+            li {
+                /*
+                list-style: square inside url("/assets/logo.png");
+            */
+            font-size: 16px;
+            }
+        }
     }
 }
 
+
 /* In Show */
+
 #titleshow {
     background: linear-gradient(to right, #00C9FF, #2b90d9);
     padding: 8px;

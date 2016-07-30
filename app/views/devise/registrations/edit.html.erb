@@ -26,7 +26,7 @@
 </div>
 <div class="formarea">
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <i>(This is for a new password. Leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off", :class => 'formbox' %>
   </div>
 
@@ -34,7 +34,7 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'formbox' %>
   </div>
-
+  <hr>
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off", :class => 'formbox' %>

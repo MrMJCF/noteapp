@@ -1,5 +1,12 @@
 <section>
-    <div id="titleshow"><%= @note.title %><br>By: <%= @note.user.username %></div><br>
+    <div id="titleshow">
+    <%= @note.title %><br>
+    By: <%= @note.user.username %> <br>
+    Category: 
+        <% if @note.category %>
+            <%= @note.category.name %>
+        <% end %>
+    </div><br>
     <div id="notesshow"><%= simple_format(@note.notes, :style => "word-wrap:break-word") %></div>
     <%= link_to 'Edit', edit_note_path(@note) %>
     <%= link_to 'Back', notes_path %>

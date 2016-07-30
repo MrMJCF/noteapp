@@ -1,6 +1,6 @@
 <section>
     <div id="notecontainer">
-        <h1>Notes</h1>
+        <h1><%= params[:category] %> Notes</h1>
         <% @notes.each do |note| %>
             <div class="note">
             <span class="title"><%= truncate(note.title, :chars => 30) %>&nbsp;&nbsp;</span>
@@ -40,5 +40,20 @@
         <h2>Sorry! No Notes Found That Match Queries</h2>
         <% end %>
     </div>
-    <%= render 'recommended' %>
+    <div id="recommended">
+        <h1>Categories</h1>
+        <div class="sidebar">
+            <p>Please inform us for the expansion of categories</p>
+            <hr style="
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #333;
+            padding: 0; ">
+                <% Category.all.each do |category| %>
+                    <span><%= link_to category.name, notes_path(category: category.name) %></span>
+                <% end %>
+            <!--<a href="/users/sign_up" id="signupbutton">Sign Up!</a>-->
+        </div>
+    </div>
 </section>
