@@ -16,7 +16,11 @@ Never give up!
 <div class="navside">
     <nav>
         <div class="part">
-            <%= link_to image_tag("logo.png"), root_path %>
+            <% if current_user.admin? %>
+                <%= link_to image_tag("logosvg.svg"), pages_adminhome_path %>
+            <% else %>
+                <%= link_to image_tag("logo.png"), root_path %>
+            <% end %>
         </div>
         <div class="part">
             <%= link_to new_note_path, class: "btn-circle", id: 'notenew' do %>
@@ -42,10 +46,12 @@ Never give up!
         </div>
         <%= link_to edit_user_registration_path do %>
             <div id="profilepic">
-                <%= current_user.username %>
                 <% if current_user.admin? %>
-                    HEY ADMIN
+                    HEY ADMIN:
+                <% else %>
+                    Hey
                 <% end %>
+                <%= current_user.username %>
                 <br><br>
                 <img src="<%= current_user.profilepic %>">
             </div>
