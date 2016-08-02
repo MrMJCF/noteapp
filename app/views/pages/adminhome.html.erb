@@ -1,0 +1,12 @@
+<section>
+    <h1>Admin Dashboard</h1>
+    <ol>
+        <% User.all.each do |u| %>
+        <li>
+            <%= u.username %>
+            <a href="/users/<%= u.id %>">Prof.</a>
+            <img width="50" src="<%= u.profilepic %>">
+        </li>
+        <% end %>
+    </ol>
+</section>
